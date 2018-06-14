@@ -1,0 +1,305 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator
+END
+imei.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/imei.js
+END
+isbn.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/isbn.js
+END
+emailAddress.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/emailAddress.js
+END
+iban.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/iban.js
+END
+ean.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/ean.js
+END
+sedol.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/sedol.js
+END
+id.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/id.js
+END
+uuid.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/uuid.js
+END
+step.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/step.js
+END
+ip.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/ip.js
+END
+siren.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/siren.js
+END
+date.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/date.js
+END
+cvv.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/cvv.js
+END
+ismn.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/ismn.js
+END
+integer.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/integer.js
+END
+base64.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/base64.js
+END
+uri.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/uri.js
+END
+rtn.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/rtn.js
+END
+identical.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/identical.js
+END
+remote.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/remote.js
+END
+choice.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/choice.js
+END
+between.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/between.js
+END
+creditCard.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/creditCard.js
+END
+vin.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/vin.js
+END
+imo.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/imo.js
+END
+digits.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/digits.js
+END
+different.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/different.js
+END
+color.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/color.js
+END
+greaterThan.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/greaterThan.js
+END
+meid.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/meid.js
+END
+lessThan.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/lessThan.js
+END
+blank.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/blank.js
+END
+hexColor.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/hexColor.js
+END
+stringLength.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/stringLength.js
+END
+hex.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/hex.js
+END
+numeric.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/numeric.js
+END
+vat.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/vat.js
+END
+cusip.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/cusip.js
+END
+mac.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/mac.js
+END
+grid.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/grid.js
+END
+regexp.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/regexp.js
+END
+issn.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/issn.js
+END
+stringCase.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/stringCase.js
+END
+notEmpty.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/notEmpty.js
+END
+isin.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/isin.js
+END
+siret.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/siret.js
+END
+file.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/file.js
+END
+zipCode.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/zipCode.js
+END
+phone.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/phone.js
+END
+callback.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/webapp/bootstrapvalidator/js/validator/callback.js
+END

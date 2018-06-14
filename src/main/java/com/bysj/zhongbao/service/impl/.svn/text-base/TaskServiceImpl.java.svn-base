@@ -1,0 +1,69 @@
+package com.erzu.zhongbao.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.erzu.zhongbao.dao.TaskMapper;
+import com.erzu.zhongbao.pojo.Task;
+import com.erzu.zhongbao.service.TaskService;
+ 
+
+@Service
+@Transactional
+public class TaskServiceImpl implements TaskService {
+	
+	@Resource(name="taskMapper")
+	private TaskMapper taskMapper ;
+
+	
+	@Override
+	public Task getTaskById(Integer taskid) {
+		// TODO Auto-generated method stub
+		return taskMapper.selectByPrimaryKey(taskid);
+	}
+	
+	@Override
+	public List<Task> getAllTasks(int pageNum, int pageSize) {
+		return taskMapper.getAlltasks((pageNum-1)*pageSize, pageSize);
+	}
+
+	@Override
+	public List<Task> getNewTasks(int pageNum, int pageSize) {
+		// TODO Auto-generated method stub
+		return taskMapper.getNewTasks((pageNum-1)*pageSize, pageSize);
+	}
+
+	@Override
+	public List<Task> getMoneyTasks(int pageNum, int pageSize) {
+		// TODO Auto-generated method stub
+		return taskMapper.getMoneyTasks((pageNum-1)*pageSize, pageSize);
+	}
+
+	@Override
+	public void upload(Integer userid, Integer hidden, String path) {
+		// TODO Auto-generated method stub
+		Task task=new Task();
+		task.setState(2);
+		task.setUserid(userid);
+		task.setEvaluate(path);
+		task.setTaskid(hidden);
+		taskMapper.updateByPrimaryKeySelective(task);
+	}
+
+	@Override
+	public void giveup(Integer taskid) {
+		// TODO Auto-generated method stub
+		Task task=new Task();
+		task.setState(0);
+		task.setTaskid(taskid);
+		taskMapper.updateByPrimaryKeySelective(task);
+	}
+
+
+
+}

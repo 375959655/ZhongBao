@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/zhuoyue/!svn/ver/150/ZhongBao/src/main/java/com/erzu/zhongbao/dao
+END
+TypeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/zhuoyue/!svn/ver/150/ZhongBao/src/main/java/com/erzu/zhongbao/dao/TypeMapper.java
+END
+CollectionMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zhuoyue/!svn/ver/52/ZhongBao/src/main/java/com/erzu/zhongbao/dao/CollectionMapper.java
+END
+MessageMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zhuoyue/!svn/ver/125/ZhongBao/src/main/java/com/erzu/zhongbao/dao/MessageMapper.java
+END
+UserMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/zhuoyue/!svn/ver/78/ZhongBao/src/main/java/com/erzu/zhongbao/dao/UserMapper.java
+END
+TaskMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/zhuoyue/!svn/ver/150/ZhongBao/src/main/java/com/erzu/zhongbao/dao/TaskMapper.java
+END
+AdminMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/zhuoyue/!svn/ver/150/ZhongBao/src/main/java/com/erzu/zhongbao/dao/AdminMapper.java
+END
+BussinessMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zhuoyue/!svn/ver/113/ZhongBao/src/main/java/com/erzu/zhongbao/dao/BussinessMapper.java
+END

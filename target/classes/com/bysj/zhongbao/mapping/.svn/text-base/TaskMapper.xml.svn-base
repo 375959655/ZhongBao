@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.erzu.zhongbao.dao.TaskMapper">
+	<resultMap id="BaseResultMap" type="com.erzu.zhongbao.pojo.Task">
+		<id column="taskid" property="taskid" jdbcType="INTEGER" />
+		<result column="taskname" property="taskname" jdbcType="VARCHAR" />
+		<result column="taskcontents" property="taskcontents" jdbcType="VARCHAR" />
+		<result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="deadline" property="deadline" jdbcType="INTEGER" />
+		<result column="typeid" property="typeid" jdbcType="INTEGER" />
+		<result column="bussinessid" property="bussinessid" jdbcType="INTEGER" />
+		<result column="userid" property="userid" jdbcType="INTEGER" />
+		<result column="state" property="state" jdbcType="INTEGER" />
+		<result column="evaluate" property="evaluate" jdbcType="VARCHAR" />
+		<result column="taskmoney" property="taskmoney" jdbcType="DOUBLE" />
+	</resultMap>
+	<sql id="Example_Where_Clause">
+		<where>
+			<foreach collection="oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" suffix=")" prefixOverrides="and">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach collection="criterion.value" item="listItem"
+										open="(" close=")" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Update_By_Example_Where_Clause">
+		<where>
+			<foreach collection="example.oredCriteria" item="criteria"
+				separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" suffix=")" prefixOverrides="and">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach collection="criterion.value" item="listItem"
+										open="(" close=")" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Base_Column_List">
+		taskid, taskname, taskcontents, createtime, deadline, typeid, bussinessid,
+		userid,
+		state, evaluate, taskmoney
+	</sql>
+	<select id="selectByExample" resultMap="BaseResultMap"
+		parameterType="com.erzu.zhongbao.pojo.TaskExample">
+		select
+		<if test="distinct">
+			distinct
+		</if>
+		'true' as QUERYID,
+		<include refid="Base_Column_List" />
+		from task
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+		<if test="orderByClause != null">
+			order by ${orderByClause}
+		</if>
+	</select>
+	<select id="selectByUserid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from task
+    where userid = #{userid,jdbcType=INTEGER} and state != -1
+     </select>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from task
+		where taskid = #{taskid,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from task
+		where taskid = #{taskid,jdbcType=INTEGER}
+	</delete>
+	<delete id="deleteByExample" parameterType="com.erzu.zhongbao.pojo.TaskExample">
+		delete from task
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</delete>
+	<insert id="insert" parameterType="com.erzu.zhongbao.pojo.Task">
+		insert into task (taskid, taskname, taskcontents,
+		createtime, deadline, typeid,
+		bussinessid, userid, state,
+		evaluate, taskmoney)
+		values (#{taskid,jdbcType=INTEGER}, #{taskname,jdbcType=VARCHAR},
+		#{taskcontents,jdbcType=VARCHAR},
+		#{createtime,jdbcType=TIMESTAMP}, #{deadline,jdbcType=INTEGER}, #{typeid,jdbcType=INTEGER},
+		#{bussinessid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER},
+		#{state,jdbcType=INTEGER},
+		#{evaluate,jdbcType=VARCHAR}, #{taskmoney,jdbcType=DOUBLE})
+	</insert>
+	<insert id="insertSelective" parameterType="com.erzu.zhongbao.pojo.Task">
+		insert into task
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="taskid != null">
+				taskid,
+			</if>
+			<if test="taskname != null">
+				taskname,
+			</if>
+			<if test="taskcontents != null">
+				taskcontents,
+			</if>
+			<if test="createtime != null">
+				createtime,
+			</if>
+			<if test="deadline != null">
+				deadline,
+			</if>
+			<if test="typeid != null">
+				typeid,
+			</if>
+			<if test="bussinessid != null">
+				bussinessid,
+			</if>
+			
+				userid,
+			
+			<if test="state != null">
+				state,
+			</if>
+			<if test="evaluate != null">
+				evaluate,
+			</if>
+			<if test="taskmoney != null">
+				taskMoney,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="taskid != null">
+				#{taskid,jdbcType=INTEGER},
+			</if>
+			<if test="taskname != null">
+				#{taskname,jdbcType=VARCHAR},
+			</if>
+			<if test="taskcontents != null">
+				#{taskcontents,jdbcType=VARCHAR},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="deadline != null">
+				#{deadline,jdbcType=INTEGER},
+			</if>
+			<if test="typeid != null">
+				#{typeid,jdbcType=INTEGER},
+			</if>
+			<if test="bussinessid != null">
+				#{bussinessid,jdbcType=INTEGER},
+			</if>
+			
+				#{userid,jdbcType=INTEGER},
+			
+			<if test="state != null">
+				#{state,jdbcType=INTEGER},
+			</if>
+			<if test="evaluate != null">
+				#{evaluate,jdbcType=VARCHAR},
+			</if>
+			<if test="taskmoney != null">
+				#{taskmoney,jdbcType=DOUBLE},
+			</if>
+		</trim>
+	</insert>
+	<select id="countByExample" parameterType="com.erzu.zhongbao.pojo.TaskExample"
+		resultType="java.lang.Integer">
+		select count(*) from task
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</select>
+	<update id="updateByExampleSelective" parameterType="map">
+		update task
+		<set>
+			<if test="record.taskid != null">
+				taskid = #{record.taskid,jdbcType=INTEGER},
+			</if>
+			<if test="record.taskname != null">
+				taskname = #{record.taskname,jdbcType=VARCHAR},
+			</if>
+			<if test="record.taskcontents != null">
+				taskcontents = #{record.taskcontents,jdbcType=VARCHAR},
+			</if>
+			<if test="record.createtime != null">
+				createtime = #{record.createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="record.deadline != null">
+				deadline = #{record.deadline,jdbcType=INTEGER},
+			</if>
+			<if test="record.typeid != null">
+				typeid = #{record.typeid,jdbcType=INTEGER},
+			</if>
+			<if test="record.bussinessid != null">
+				bussinessid = #{record.bussinessid,jdbcType=INTEGER},
+			</if>
+			
+				userid = #{record.userid,jdbcType=INTEGER},
+			
+			<if test="record.state != null">
+				state = #{record.state,jdbcType=INTEGER},
+			</if>
+			<if test="record.evaluate != null">
+				evaluate = #{record.evaluate,jdbcType=VARCHAR},
+			</if>
+			<if test="record.taskmoney != null">
+				taskmoney = #{record.taskmoney,jdbcType=DOUBLE},
+			</if>
+		</set>
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByExample" parameterType="map">
+		update task
+		set taskid = #{record.taskid,jdbcType=INTEGER},
+		taskname = #{record.taskname,jdbcType=VARCHAR},
+		taskcontents = #{record.taskcontents,jdbcType=VARCHAR},
+		createtime = #{record.createtime,jdbcType=TIMESTAMP},
+		deadline = #{record.deadline,jdbcType=INTEGER},
+		typeid = #{record.typeid,jdbcType=INTEGER},
+		bussinessid = #{record.bussinessid,jdbcType=INTEGER},
+		userid = #{record.userid,jdbcType=INTEGER},
+		state = #{record.state,jdbcType=INTEGER},
+		evaluate = #{record.evaluate,jdbcType=VARCHAR},
+		taskmoney = #{record.taskmoney,jdbcType=DOUBLE}
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByPrimaryKeySelective" parameterType="com.erzu.zhongbao.pojo.Task">
+		update task
+		<set>
+			<if test="taskname != null">
+				taskname = #{taskname,jdbcType=VARCHAR},
+			</if>
+			<if test="taskcontents != null">
+				taskcontents = #{taskcontents,jdbcType=VARCHAR},
+			</if>
+			<if test="createtime != null">
+				createtime = #{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="deadline != null">
+				deadline = #{deadline,jdbcType=INTEGER},
+			</if>
+			<if test="typeid != null">
+				typeid = #{typeid,jdbcType=INTEGER},
+			</if>
+			<if test="bussinessid != null">
+				bussinessid = #{bussinessid,jdbcType=INTEGER},
+			</if>
+			
+				userid = #{userid,jdbcType=INTEGER},
+			
+			<if test="state != null">
+				state = #{state,jdbcType=INTEGER},
+			</if>
+			<if test="evaluate != null">
+				evaluate = #{evaluate,jdbcType=VARCHAR},
+			</if>
+			<if test="taskmoney != null">
+				taskmoney = #{taskmoney,jdbcType=DOUBLE},
+			</if>
+		</set>
+		where taskid = #{taskid,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.erzu.zhongbao.pojo.Task">
+		update task
+		set taskname = #{taskname,jdbcType=VARCHAR},
+		taskcontents = #{taskcontents,jdbcType=VARCHAR},
+		createtime = #{createtime,jdbcType=TIMESTAMP},
+		deadline = #{deadline,jdbcType=INTEGER},
+		typeid = #{typeid,jdbcType=INTEGER},
+		bussinessid = #{bussinessid,jdbcType=INTEGER},
+		userid = #{userid,jdbcType=INTEGER},
+		state = #{state,jdbcType=INTEGER},
+		evaluate = #{evaluate,jdbcType=VARCHAR},
+		taskmoney = #{taskmoney,jdbcType=DOUBLE}
+		where taskid = #{taskid,jdbcType=INTEGER}
+	</update>
+	<select id="taskInfosByType" resultMap="BaseResultMap">
+		select * from task where typeid = #{typeid,jdbcType=INTEGER}
+		order by createtime desc limit #{skip,jdbcType=INTEGER},
+		#{size,jdbcType=INTEGER}
+	</select>
+	<select id="taskInfosByText" resultMap="BaseResultMap">
+		select * from task where taskname like '%${text}%'
+		order by createtime desc limit #{skip,jdbcType=INTEGER},
+		#{size,jdbcType=INTEGER}
+	</select>
+	<select id="getAlltasks" resultMap="BaseResultMap">
+		select * from task order by createtime desc limit #{skip,jdbcType=INTEGER},
+		#{size,jdbcType=INTEGER}
+	</select>
+
+	<select id="getNewTasks" resultMap="BaseResultMap">
+		select * from task order by createtime desc limit #{skip,jdbcType=INTEGER},
+		#{size,jdbcType=INTEGER}
+	</select>
+	<select id="getMoneyTasks" resultMap="BaseResultMap">
+		select * from task order by taskmoney desc limit #{skip,jdbcType=INTEGER},
+		#{size,jdbcType=INTEGER}
+	</select>
+	<select id="getAlltasksPage" resultType="com.erzu.zhongbao.vo.TaskInfo">
+		select taskname,taskcontents,createtime,deadline,typename,bussinessname,username,evaluate,taskmoney
+		 from task,user,type,bussiness  where user.userid=task.userid and 
+		task.bussinessid = bussiness.bussinessid and type.typeid=task.typeid
+	</select>
+</mapper>

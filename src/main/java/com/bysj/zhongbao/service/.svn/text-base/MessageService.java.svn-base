@@ -1,0 +1,24 @@
+package com.erzu.zhongbao.service;
+
+import java.util.List;
+
+import com.erzu.zhongbao.pojo.Message;
+import com.erzu.zhongbao.vo.MessageInfo;
+
+public interface MessageService {
+	
+	//查询所有Message
+	List<Message> selectMessageList(int userId,int index, int num);
+	
+	//根据 Messageid 查询 信息
+	MessageInfo selectMessageById(int msgId);
+	
+	//插入 Message
+	int insertMessage(Message record);
+	
+	
+	
+
+
+
+}

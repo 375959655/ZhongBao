@@ -1,0 +1,96 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+<%  
+String path = request.getContextPath();  
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";  
+%> 
+<%=request.getSession().getAttribute("name") %>
+
+<% 
+	String msgId = request.getParameter("msgid");
+	if (msgId == null || msgId.equals("")){
+		msgId = "";
+	}
+%>
+<%-- <% request.getSession().getAttribute("user") %> --%><!-- 获取user -->
+<!DOCTYPE html>
+<html>
+    <head>
+    <base href="<%=basePath%>">
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/popper.min.js" ></script>
+	<script src="js/bootstrap.js" ></script>
+	<script src="page/pagetool.js" ></script>
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/userMain.css" type="text/css"> 
+     <link rel="stylesheet" href="css/site.css" type="text/css"> 
+     <script type="text/javascript">
+     var username=<%=request.getSession().getAttribute("name")%>;
+     var msgId=<%=msgId%>;
+     $(function() {
+    	 getMsg();
+ 	})
+     function getMsg(){
+    	 
+    	 
+    	 $.ajax({
+    		 url:"Message/getMsg",
+    		 type:"POST",
+    		 data:{"msgId":msgId},
+    		 dataType:"json",
+    		 success:function(data){
+    			/*  alert("success"); */
+    			$(".sender").text(data.realname);
+    			$(".smtime").text(data.msgtime);//href="User/replymsg
+    			$(".sminfo").text(data.msgcontents);
+    			$(".tiao").text("回复")
+    			$(".tiao").attr("href","User/replymsg?realname="+data.realname)
+    			
+    			 
+    		 }
+    	 })
+     }
+     </script>
+    </head>
+    <body>
+    	<jsp:include page="top.jsp"></jsp:include>
+  
+  		<!--这个是主体部分-->
+  		<div class="container" style="font-size: medium; padding-top: 20px; height: 555px;">
+		<div class="row" >
+			<div class="col-sm-12" >
+				<h3>
+					<div class="col-sm-12 msgtitle"><h1>我的消息</h1></div>
+				</h3>
+			</div>
+		</div>
+		<div class="row" style="padding-top: 40px;">
+			<div class="col-sm-offset-2 col-sm-2 text-right">发件人：</div>
+			<div class="col-sm-2 sender"> yizhizhi</div>
+			<div class="col-sm-2 ">
+				<a class="tiao"  >回复</a>
+			</div>
+		</div>
+		<!-- //href="User/replymsg" -->
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-2 text-right">收件人：</div>
+			<div class="col-sm-6 realname"> ${ sessionScope.userrealname}</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-2 text-right">时间：</div>
+			<div class="col-sm-6 smtime">2017.09.22 09：25</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-2 text-right">内容：</div>
+			<div class="col-sm-6"><a class="sminfo">你好呀我很好呀哈哈哈呀呀呀</a></div>
+		</div>		
+	</div>
+
+	
+	<jsp:include page="bottom.jsp"></jsp:include>
+ 	</body>
+</html>

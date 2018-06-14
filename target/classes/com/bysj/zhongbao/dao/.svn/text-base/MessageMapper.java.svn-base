@@ -1,0 +1,38 @@
+package com.erzu.zhongbao.dao;
+
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
+
+import com.erzu.zhongbao.pojo.Message;
+import com.erzu.zhongbao.pojo.MessageExample;
+import com.erzu.zhongbao.vo.MessageInfo;
+
+public interface MessageMapper {
+    int countByExample(MessageExample example);
+
+    int deleteByExample(MessageExample example);
+
+    int deleteByPrimaryKey(Integer msgid);
+
+    int insert(Message record);
+
+    int insertSelective(Message record);
+
+    List<Message> selectByExample(MessageExample example);
+
+    Message selectByPrimaryKey(Integer msgid);
+
+    int updateByExampleSelective(@Param("record") Message record, @Param("example") MessageExample example);
+
+    int updateByExample(@Param("record") Message record, @Param("example") MessageExample example);
+
+    int updateByPrimaryKeySelective(Message record);
+
+    int updateByPrimaryKey(Message record);
+    /*@Param("msgid")int msgid,*/
+    List<Message> getMessage(@Param("userId")int userId,@Param("index")int index,@Param("num")int num);
+    
+    MessageInfo getMessageById(@Param("msgId")int msgId);
+
+	
+}

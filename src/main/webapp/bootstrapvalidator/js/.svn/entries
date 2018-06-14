@@ -1,0 +1,58 @@
+8
+
+dir
+174
+https://desktop-p4rmcqv/svn/zhuoyue/ZhongBao/src/main/webapp/bootstrapvalidator/js
+https://desktop-p4rmcqv/svn/zhuoyue
+
+
+
+2017-09-25T12:28:55.616214Z
+51
+honganqi
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9427ed28-3727-7149-ab8c-1419a4d3a8ee
+
+bootstrapValidator.js
+file
+
+
+
+
+2017-09-27T01:25:23.604000Z
+02896992a5af9b806b6e43d8af4156f7
+2017-09-25T12:28:55.616214Z
+51
+honganqi
+
+bootstrapValidator.min.js
+file
+
+
+
+
+2017-09-27T01:25:22.902000Z
+55417190ec5af90430121b0e5718590e
+2017-09-25T12:28:55.616214Z
+51
+honganqi
+
+language
+dir
+
+validator
+dir
+

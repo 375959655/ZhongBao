@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/zhuoyue/!svn/ver/164/ZhongBao/src/main/java/com/erzu/zhongbao/service/impl
+END
+TaskServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/zhuoyue/!svn/ver/158/ZhongBao/src/main/java/com/erzu/zhongbao/service/impl/TaskServiceImpl.java
+END
+BussinessServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/zhuoyue/!svn/ver/156/ZhongBao/src/main/java/com/erzu/zhongbao/service/impl/BussinessServiceImpl.java
+END
+AdminServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/zhuoyue/!svn/ver/164/ZhongBao/src/main/java/com/erzu/zhongbao/service/impl/AdminServiceImpl.java
+END
+TypeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/zhuoyue/!svn/ver/152/ZhongBao/src/main/java/com/erzu/zhongbao/service/impl/TypeServiceImpl.java
+END
+UserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/zhuoyue/!svn/ver/80/ZhongBao/src/main/java/com/erzu/zhongbao/service/impl/UserServiceImpl.java
+END
+MessageServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/zhuoyue/!svn/ver/127/ZhongBao/src/main/java/com/erzu/zhongbao/service/impl/MessageServiceImpl.java
+END

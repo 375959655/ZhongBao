@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.erzu.zhongbao.dao.MessageMapper" >
+  <resultMap id="BaseResultMap" type="com.erzu.zhongbao.pojo.Message" >
+    <id column="msgid" property="msgid" jdbcType="INTEGER" />
+    <result column="msgcontents" property="msgcontents" jdbcType="VARCHAR" />
+    <result column="msgtime" property="msgtime" jdbcType="TIMESTAMP" />
+    <result column="bussinessid" property="bussinessid" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    msgid, msgcontents, msgtime, bussinessid, userid
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.erzu.zhongbao.pojo.MessageExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from message
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from message
+    where msgid = #{msgid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from message
+    where msgid = #{msgid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.erzu.zhongbao.pojo.MessageExample" >
+    delete from message
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.erzu.zhongbao.pojo.Message" >
+    insert into message ( msgcontents, msgtime, 
+      bussinessid, userid)
+    values ( #{msgcontents,jdbcType=VARCHAR}, #{msgtime,jdbcType=TIMESTAMP}, 
+      #{bussinessid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.erzu.zhongbao.pojo.Message" >
+    insert into message
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+     <!--  <if test="msgid != null" >
+        msgid,
+      </if> -->
+      <if test="msgcontents != null" >
+        msgcontents,
+      </if>
+      <if test="msgtime != null" >
+        msgtime,
+      </if>
+      <if test="bussinessid != null" >
+        bussinessid,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="msgid != null" >
+        #{msgid,jdbcType=INTEGER},
+      </if>
+      <if test="msgcontents != null" >
+        #{msgcontents,jdbcType=VARCHAR},
+      </if>
+      <if test="msgtime != null" >
+        #{msgtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bussinessid != null" >
+        #{bussinessid,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.erzu.zhongbao.pojo.MessageExample" resultType="java.lang.Integer" >
+    select count(*) from message
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update message
+    <set >
+      <if test="record.msgid != null" >
+        msgid = #{record.msgid,jdbcType=INTEGER},
+      </if>
+      <if test="record.msgcontents != null" >
+        msgcontents = #{record.msgcontents,jdbcType=VARCHAR},
+      </if>
+      <if test="record.msgtime != null" >
+        msgtime = #{record.msgtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.bussinessid != null" >
+        bussinessid = #{record.bussinessid,jdbcType=INTEGER},
+      </if>
+      <if test="record.userid != null" >
+        userid = #{record.userid,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update message
+    set msgid = #{record.msgid,jdbcType=INTEGER},
+      msgcontents = #{record.msgcontents,jdbcType=VARCHAR},
+      msgtime = #{record.msgtime,jdbcType=TIMESTAMP},
+      bussinessid = #{record.bussinessid,jdbcType=INTEGER},
+      userid = #{record.userid,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.erzu.zhongbao.pojo.Message" >
+    update message
+    <set >
+      <if test="msgcontents != null" >
+        msgcontents = #{msgcontents,jdbcType=VARCHAR},
+      </if>
+      <if test="msgtime != null" >
+        msgtime = #{msgtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="bussinessid != null" >
+        bussinessid = #{bussinessid,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where msgid = #{msgid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.erzu.zhongbao.pojo.Message" >
+    update message
+    set msgcontents = #{msgcontents,jdbcType=VARCHAR},
+      msgtime = #{msgtime,jdbcType=TIMESTAMP},
+      bussinessid = #{bussinessid,jdbcType=INTEGER},
+      userid = #{userid,jdbcType=INTEGER}
+    where msgid = #{msgid,jdbcType=INTEGER}
+  </update> <!--where user.userid =#{userid}  -->
+   <select id="getMessage" parameterType="java.lang.Integer"  resultType="com.erzu.zhongbao.vo.MessageInfo">
+  	select msgid,msgcontents,realname,msgtime from Message join User on message.userid=user.userid  where message.userid=#{userId} 
+     
+  	limit #{index},#{num}
+  </select> 
+  <select id="getMessageById" parameterType="java.lang.Integer" resultType="com.erzu.zhongbao.vo.MessageInfo">
+  	select msgcontents,realname,msgtime from Message join User on message.userid=user.userid where msgid=#{msgId}
+  </select>
+  
+</mapper>

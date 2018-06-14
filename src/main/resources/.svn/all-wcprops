@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/zhuoyue/!svn/ver/169/ZhongBao/src/main/resources
+END
+spring-mvc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/zhuoyue/!svn/ver/169/ZhongBao/src/main/resources/spring-mvc.xml
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/zhuoyue/!svn/ver/66/ZhongBao/src/main/resources/jdbc.properties
+END
+spring-mybatis.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/resources/spring-mybatis.xml
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/zhuoyue/!svn/ver/51/ZhongBao/src/main/resources/log4j.properties
+END

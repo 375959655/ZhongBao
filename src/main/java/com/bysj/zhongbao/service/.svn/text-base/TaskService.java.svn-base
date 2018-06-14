@@ -1,0 +1,15 @@
+package com.erzu.zhongbao.service;
+
+import java.util.List;
+
+import com.erzu.zhongbao.pojo.Task;
+ 
+
+public interface TaskService {
+	public Task getTaskById(Integer taskid);
+	List<Task> getAllTasks(int pageNum,int pageSize);
+	List<Task> getNewTasks(int pageNum,int pageSize);
+	List<Task> getMoneyTasks(int pageNum,int pageSize);
+	public void upload(Integer userid, Integer hidden, String path);
+	public void giveup(Integer userid);
+}
