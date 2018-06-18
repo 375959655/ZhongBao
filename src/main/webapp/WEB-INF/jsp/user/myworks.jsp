@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	     }
     	    else
     	    {
-    	      alert("您选择了继续任务，加油！！");
+    	      alert("您选择了继续任务！！");
     	    }
 	};
     	function addMsg(){
@@ -77,10 +77,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         				    msg.find(".contents").text(b.taskmoney+"元");
         				    if(b.state==0){
         				    	 msg.find(".state").text("进行中");
-        				    }else if(b.state==2){
+        				    }else if(b.state==1){
         				    	 msg.find(".state").text("审核中");
         				    }
-        				    else if(b.state==1){
+        				    else if(b.state==2){
        				    	 msg.find(".state").text("已完成");
        				       }else {
       				    	 msg.find(".state").text("未通过");

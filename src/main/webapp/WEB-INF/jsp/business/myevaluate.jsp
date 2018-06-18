@@ -31,31 +31,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div class="row reply" style="display: block;">
 			<div class="col-sm-2 col-xs-2" style="font-size:medium">
-				<div class="author" ><a href="User/sendmsg" style="color:#FFC107">anqianqi</a></div>
-				<div class="sex">女</div>
-				<div class="city">济宁</div>
+				<div class="author" ><a href="User/sendmsg" style="color:#FFC107">condy1</a></div>
+				<div class="sex">男</div>
 				<div class="lever">打分：5</div>
 			</div>
 			<div class="col-sm-10 col-xs-10">
-				<div class="msgcontent" style="font-size:medium">很好的商家<br/>付款很快<br>有机会会再次合作的</div>
+				<div class="msgcontent" style="font-size:medium">testtest</div>
 			</div>
 			<div class="col-sm-12" style="overflow: hidden;">
-				<div class="rightinfo time">2017-08-28 16:34:20</div>
-			</div>
-		</div>
-		
-		<div class="row reply" style="display: block;">
-			<div class="col-sm-2 col-xs-2" style="font-size:medium">
-				<div class="author" ><a href="User/sendmsg" style="color:#FFC107">anqianqi</a></div>
-				<div class="sex">女</div>
-				<div class="city">济宁</div>
-				<div class="lever">打分：5</div>
-			</div>
-			<div class="col-sm-10 col-xs-10">
-				<div class="msgcontent" style="font-size:medium">差评差评<br/>做事拖拖沓沓<br>真是气死我了</div>
-			</div>
-			<div class="col-sm-12" style="overflow: hidden;">
-				<div class="rightinfo time">2017-08-28 16:34:20</div>
+				<div class="rightinfo time">2018-6-10 16:34:20</div>
 			</div>
 		</div>
 		

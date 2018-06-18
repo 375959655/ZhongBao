@@ -19,22 +19,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body background="image/bbbba.jpg">
 
     <div id="login">
-        <div style="font-size: 60px; color: #706E70;">众包管理系统</div>
+        <div style="font-size: 60px; color: #706E70;">众包管理系统管理员登陆</div>
     </div>
-    <div id="form">
+    <div id="login">
         <form method="POST">
             <div id="name">
-                <img src="image/name.png" id="nameimg">
-                	用户名：
-                <input type="text" id="nametext" name="loginname"/><br/>
+	                       用户名:<input type="text" id="nametext" name="loginname"/><br/>
             </div>
             <div id="password" style="float: left">
-                <img src="image/password.png" id="passwordimg">
-                                           密&nbsp;码：
-                <input type="password" id="passwordtext" name="password"/>
+	                        密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="password" id="passwordtext" name="password"/><br/>
             </div>
             <div id="warning" style="float: left">
-            		
                 <input type="text" id="warningtext" name="warning">
             </div>
             <div>

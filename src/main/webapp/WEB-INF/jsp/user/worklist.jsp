@@ -94,10 +94,10 @@
 
 		</div>
 		<div class="row" style="padding-top: 30px">
-			<div class="col-sm-8 col-xs-8">
+			<div class="col-sm-6 col-xs-8">
 				<h2>标题</h2>
 			</div>
-			<div class="col-sm-2 col-xs-4 text-center">
+			<div class="col-sm-4 col-xs-4 text-center">
 				<h2>时间</h2>
 			</div>
 			<div class="col-sm-2 hidden-xs text-center">
@@ -106,15 +106,14 @@
 		</div>
 
 		<div class="template row">
-			<div class="col-sm-8 col-xs-8 text-limit">
+			<div class="col-sm-6 col-xs-8 text-limit">
 				<a class="title" style="font-size: medium" href="user/message.jsp"></a>
 			</div>
-			<div class="col-sm-2 col-xs-4 text-center time"
+			<div class="col-sm-4 col-xs-4 text-center time"
 				style="font-size: medium"></div>
 			<div class="col-sm-2 hidden-xs text-center money" style="color: red;">
 				<h2></h2>
 			</div>
-			<hr align=center width=1300 color=#DDDDDD size=1>
 		</div>
 
 		<div class="row p">

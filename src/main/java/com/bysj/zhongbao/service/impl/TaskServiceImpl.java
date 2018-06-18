@@ -48,7 +48,7 @@ public class TaskServiceImpl implements TaskService {
 	public void upload(Integer userid, Integer hidden, String path) {
 		// TODO Auto-generated method stub
 		Task task=new Task();
-		task.setState(2);
+		task.setState(1);
 		task.setUserid(userid);
 		task.setEvaluate(path);
 		task.setTaskid(hidden);

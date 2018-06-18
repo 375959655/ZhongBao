@@ -92,12 +92,10 @@ public class TaskController {
 		try {
 			pageNum = Integer.parseInt(pageIndex);
 		} catch (Exception e) {
-			// TODO: handle exception
 		}
 		try {
 			pagesize = Integer.parseInt(pageSize);
 		} catch (Exception e) {
-			// TODO: handle exception
 		}
 		List<Task> list = taskService.getAllTasks(pageNum , pagesize,theme);
 		Map<String, Object> map = new HashMap<String, Object>();

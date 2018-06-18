@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="css/userMain.css" type="text/css"> 
     <link rel="stylesheet" href="css/site.css" type="text/css"> 
     <script type="text/javascript">
-    	var businessId = 1;/* ${sessionScope.businessId}; */
+    	var businessId = ${sessionScope.businessId}; 
     	var index = 1;
     	$(function(){
     		addMsg();
@@ -87,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<jsp:include page="../user/top.jsp"></jsp:include>
   
   <!--body部分-->
-  	<div class="container" style="padding-top: 20px;height: 550px;">		
+  	<div class="container" style="padding-top: 20px;height: 800px;">		
 		<div class="row">
 			<div class="col-sm-12 msgtitle"><h1>我发布的任务</h1></div>
 			

@@ -48,7 +48,7 @@
 				<div class="msgcontent" style="font-size: medium">哈你你</div>
 			</div>
 			<div class="col-sm-3 col-xs-10">
-			<img class="evaluate"  width="200px"  height="200px" alt="用户要提交的材料" src=""  >
+			<div><a class="evaluate" style="font-size: medium"></a></div>
 			</div>
 			<div class="col-sm-1 col-xs-10"><br/><br/><br/>
             <button class="btn1">通过</button><br/><br/><br/>
@@ -90,7 +90,9 @@ function getTask(){
                 task.find(".state").text("完成状态:"+showState(data.state));
                 task.find(".msgcontent").text(data.taskcontents);
                 if(data.evaluate!=null){
-                task.find(".evaluate").attr("src","/pic/"+data.evaluate);
+                	task.find(".evaluate").text(data.evaluate);
+                	task.find(".evaluate").attr("href",
+                		"./upload/"+data.evaluate);
                 }
                 task.find(".btn1").attr("onclick","finishState("+data.taskid+")");
                 task.find(".btn2").attr("onclick","backState("+data.taskid+")");
@@ -104,11 +106,11 @@ function getTask(){
 }
 
 function showState(state){
-	if(state==1){
+	if(state==2){
 		return "已完成";
 	}else if(state==0){
 		return "进行中";
-	}else if(state==2){
+	}else if(state==1){
 		return "审核中";
 	}else if(state==-1){
 		return "已删除";
@@ -152,7 +154,7 @@ function finishState(taskid) {
 		async:true,
 		data:{
 			"taskid":taskid,
-			"state":1//2再审1完成0进行
+			"state":2
 		},
 		dataType:"json"
 		});

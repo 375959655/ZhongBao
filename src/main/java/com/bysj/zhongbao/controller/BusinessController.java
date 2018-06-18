@@ -167,7 +167,6 @@ public class BusinessController {
 		}else{
 			taskDetail.setUsername("无");
 			taskDetail.setTel("无");
-			System.out.println("任务没有接收"+gson.toJson(taskDetail));
 			return gson.toJson(taskDetail);
 		}
 	}

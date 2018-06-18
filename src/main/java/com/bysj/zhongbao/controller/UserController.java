@@ -216,10 +216,13 @@ public class UserController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		Gson gson = new Gson();
 		User user = userService.login(username, password);
+
 		if (null!=user) {
+			if(user.getState()==0) {
 			session.setAttribute("user", user);
-			map.put("result", 1);
-			System.out.println(user);
+			map.put("result", 1);}else {
+				map.put("result", 0);
+			}
 		}
 		return gson.toJson(map);
 	}
@@ -237,7 +240,8 @@ public class UserController {
         Integer userid=((User)session.getAttribute("user")).getUserid();
 	    String name = UUID.randomUUID().toString().replaceAll("-", "");
 		String ext = FilenameUtils.getExtension(file.getOriginalFilename());
-		file.transferTo(new File("D:\\upload\\" + "userid"+userid+"taskid"+hidden+"-"+name + "." + ext));	
+		//file.transferTo(new File("D:\\upload\\" + "userid"+userid+"taskid"+hidden+"-"+name + "." + ext));
+		file.transferTo(new File("D:\\study\\WorkSpace\\ZhongBao\\src\\main\\webapp\\upload\\"+ "userid"+userid+"taskid"+hidden+"-"+name + "." + ext));
 		String path="userid"+userid+"taskid"+hidden+"-"+name + "." + ext;
 	    taskService.upload(userid,hidden,path);
 		return myworks(model,session,1);
@@ -266,13 +270,10 @@ public class UserController {
 	@RequestMapping(value = "/logout",produces = "text/html;charset=UTF-8")
 	@ResponseBody
 	private String logout(HttpSession session){
-		System.out.println("退出测试");
 		session.invalidate();
 		int result = 1;
 		JsonObject jsonObject = new JsonObject();
 		jsonObject.addProperty("result", result);
-//		session.removeAttribute("user");
-//		session.invalidate();
 		return jsonObject.toString();
 	}
 	@RequestMapping(value = "/regis",produces = "text/html;charset=UTF-8")

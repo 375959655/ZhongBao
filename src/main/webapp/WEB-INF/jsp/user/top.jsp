@@ -25,9 +25,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <a class="nav-link" href="User/mymsg">站内信</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">关于我们</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="javascript:logout()">退出</a>
           </li>
         </ul>

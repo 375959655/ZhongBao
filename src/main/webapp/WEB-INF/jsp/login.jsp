@@ -134,6 +134,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    			if(data.result==1){
 	    				alert("登录成功");
 	    				window.location.replace("User/index");
+	    			}else if(data.result==0){
+	    				alert("该用户已禁用");
 	    			}else{
 	    				alert("您的账号或密码不正确，请重新输入!");
 	    			}
